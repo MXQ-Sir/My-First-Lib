@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <title>没眼睛的程序猿Blog</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        #G-head{
+            display: flex;
+            padding:8px 10px;
+            /* justify-content: center; */
+            background-color:white;
+            position:sticky;
+            top:0;
+            /* align-items:center; */
+            /* width:100%; */
+        }
+       
+        #G-head .img{
+            margin-right:5px;
+            width:8%;
+            /* height:100%; */
+            border-radius:50%;
+            /* background-color: #006dfe; */
+            background-size: cover;
+            background-image:url("./img/bog.jpg");
+            animation:zzz 5s infinite ease;
+        }
+
+        #G-head h1{
+            font-size:18px;
+            color:#006dfe;
+            font-weight:200;
+            background-color: white;
+        }
+
+        #main{
+            margin-top:12%;
+            padding:0 10px;
+            position: relative;
+            transform: translateX(0);
+            animation: donghua 1.2s  alternate;
+            animation-play-state: paused;
+
+        }
+
+        #main h1{
+            text-align: center;
+            letter-spacing:1px;
+        }
+        #main #take-me{
+            margin:25px 0;
+            color:#8b98aa;
+            line-height:1.8;
+        }
+
+        #btn{
+            position:absolute;
+            top:120%;
+            left:50%;
+            transform: translateX(-50%);
+            width:40%;
+            height:40px;
+            background:linear-gradient(to right bottom,#006dfe,#1296ea);
+            border-radius:10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color:white;
+            font-weight:700;
+            box-shadow:0 0 10px #94c6e6;
+            /* transform:scale(1,1) translateX(-50%); */
+            animation:size 2s infinite ease-in-out;
+        }
+        
+        #take{
+            padding:0px 10px;
+            margin-top:35%;
+            /* background-color: tomato; */
+            transform: translateX(0);
+            animation: donghua 1.2s  alternate;
+            animation-play-state: paused;
+        }
+
+        #take .tell{
+            /* background-color: teal; */
+            margin:20px 0;
+            display: flex;
+        }
+
+        #take .tell .img{
+            width:35px;
+            height:35px;
+            margin-right:5px;
+            border-radius:50%;
+            background-image: url("img/pass.jpg");
+            background-size: cover;
+        }
+        #take .tell .pl{
+            width:85%;
+            word-wrap: break-word;
+            word-break: break-all;
+            /* background-color: brown; */
+        }
+        #take .tell .pl .name{
+            color:black;
+            font-size:12px;
+            font-weight:600;
+            margin-bottom:8px;
+        }
+
+        #take .tell .pl .content{
+            background-color:#f9f9f9;
+            padding:5px;
+            border-radius:5px;
+            font-size:14px;
+            color:#474747;
+            /* color:#9ca6b4; */
+            /* border-bottom:1px solid #f0f0f0; */
+        }
+
+        #take .tell .pl .content img{
+            width:25%;
+        }
+
+        #black{
+            position:fixed;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background-color:royalblue;
+            display:none;
+            /* opacity:0.5; */
+        }
+
+        #form{
+            display:none;
+            position:absolute;
+            top:50%;
+            left:50%;
+            width:80%;
+            /* height:60%; */
+            background-color:white;
+            /* background-color: yellow; */
+            border-radius:10px;
+            transform: translateX(-50%) translateY(-50%);
+            /* transition:translateY 0.8s ease-in; */
+            /* overflow: hidden; */
+            text-align: center;
+        }
+        #form{
+            /* background-color: saddlebrown; */
+            padding:10px;
+        }
+        #form h1{
+            margin:20px 0;
+        }
+        #form #form-cn{
+            width:80%;
+            padding:5px 10px;
+            height:70px;
+            border-radius:5px;
+            border:#d3d1d4 1px solid;
+            outline:none;
+            resize:none;
+            word-wrap: break-word;
+            word-break: break-all;
+        }
+        #form #name{
+            width:80%;
+            padding:5px 10px;
+            height:18px;
+            margin:5px 0;
+            border-radius:5px;
+            border:#d3d1d4 1px solid;
+            outline:none;
+        }
+        #form #ok{
+            margin:20px 0;
+            width:90%;
+            padding:10px;
+            background-color:#e6e1e7;
+            color:white;
+            border:none;
+            border-radius:5px;
+            transition:all 0.3s;
+            outline:none;
+        }
+
+
+        @keyframes donghua{
+            0%{
+                transform:translateY(0px);
+            }25%{
+                transform: translateY(30px);
+            }50%{
+                transform: translateY(-30px);
+            }
+            75%{
+                transform:translateY(10px);
+            }
+            100%{
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes zzz {
+            0%{
+                transform: rotateZ(0deg);
+            }50%{
+                transform: rotateZ(360deg);
+            }
+        }
+
+        @keyframes size{
+            0%{
+                box-shadow:0 0 10px #94c6e6;
+                /* transform:scale(1,1) translateX(-50%); */
+            }50%{
+                box-shadow:0 0 80px #94c6e6;
+                /* transform:scale(1.1,1.1) translateX(-50%); */
+            }100%{
+                box-shadow:0 0 10px #94c6e6;
+                /* transform:scale(1,1) translateX(-50%); */
+            }
+        }
+
+    </style>
+    <script src="./jquery-1.12.3.min.js"></script>
+    <script>
+        window.onload=function(){
+            let port = "http://192.168.10.9:3000/take";
+            let main= document.getElementById("main");
+            let take = document.getElementById("take");
+            let btn = document.getElementById("btn");
+            let black = document.getElementById("black")
+            let $ok = $("#ok");
+            let $name = $("#name");
+            let $cn= $("#form-cn");
+            let form = $("#form");
+            let name_reg=/[A-Za-z0-9_\-\u4e00-\u9fa5]{1,8}/;
+            let cn_reg=/[A-Za-z0-9_\-\u4e00-\u9fa5]{1,50}/;
+            main.style.animationPlayState="running";
+            take.style.animationPlayState="running";
+            btn.onclick=function(){
+                $(black).fadeToggle(200);
+                    take.style.display="none";
+                    main.style.display="none";
+                form.slideToggle(200);
+                // document.documentElement.scrollTop=0;
+                // document.body.scrollTop(0);
+                // document.documentElement.scrollTop(0);
+
+            };
+            black.onclick=function(){
+                take.style.display="block";
+                main.style.display="block";
+                $(black).fadeToggle(200);
+                $(form).slideToggle(200);                
+            }
+
+            $cn.keyup(function(){
+                areYouOk();
+            });
+            $name.keyup(function(){
+                areYouOk();
+            });
+
+            function areYouOk(){
+                if(cn_reg.test($cn.val())&&name_reg.test($name.val())){
+                    $ok.prop({disabled:false});
+                    $ok.css({backgroundColor:"royalblue"});
+                }else{
+                    $ok.prop({disabled:true});
+                    $ok.css({backgroundColor:"#e6e1e7"});
+                }
+            }
+            
+            let xhr = new XMLHttpRequest();
+            xhr.onreadystatechange=function(){
+                if(xhr.readyState===4){
+                    console.log("我执行了！");
+                    let arr = JSON.parse(xhr.response);
+                    let str_arr=take.innerHTML;
+                    for(let i=0;i<arr.length;i++){
+                        str_arr+=`<div class="tell"><div class="img"></div><div class="pl"><p class="name">${arr[i].name}</p>
+                <p class="content">${arr[i].content}</p></div></div></div>`;
+                }
+                take.innerHTML=str_arr;
+                console.log(str_arr);
+                }
+            }
+            xhr.open("get",port);
+            xhr.send();
+
+        };
+    </script>
+
+</head>
+<body>
+    <div id="G-head">
+        <div class="img"></div>
+        <h1>网页-还在施工中...</h1>
+    </div>
+    <div id="main">
+        <h1>Hello!我是<span style="color:#006dfe;">马向前</span></h1>
+        <div id="take-me">热爱计算机技术的Web前端菜鸟，起床困难户，拖延症患者，别熬夜了，自律起来，自信点，坚持住，不放弃，走点心吧！行动起来，别说“下次一定！” Come ON~~~</div>
+        <div id="btn"><span>点击写个评论</span></div>
+    </div>
+
+    <div id="take">
+        <div class="tell">
+            <div class="img"></div>
+            <div class="pl">
+                <p class="name">没眼睛的程序猿</p>
+                <p class="content">欢迎大家！来评论！!</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="black"></div>
+        <form action="/take" method="POST" id="form">
+            <h1>欢迎!<span style="color:#1876fc;">Message</span></h1>
+            <div><textarea name="content" id="form-cn" maxlength="50" placeholder="你要说的话:(限50字)"></textarea></div>
+            <div><input type="text" name="name" id="name" placeholder="你的大名:" maxlength="8"></div>
+            <div><button type="submit" id="ok" disabled>评论</button></div>
+            <p style="color:#474747;font-size:12px;margin-bottom:10px;">注:点蓝色区关闭评论窗口！</p>
+        </form>
+</body>
+</html>
