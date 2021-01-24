@@ -8,11 +8,9 @@
 
 1. <font color="red">傻瓜式安装---点点点</font>
 
-2. 鼠标右键，点击 Git Bash Here 如图 :
+2. 鼠标右键，点击 Git Bash Here 如图 : ![right](https://ftp.bmp.ovh/imgs/2021/01/c6fb271cf2c5ba34.png)
 
-   ​					![right](C:\Users\18403\Desktop\MarkDown\Git\img\right.png)
-
-3. 点击后，将会打开命令行窗口![shell](C:\Users\18403\Desktop\MarkDown\Git\img\shell.PNG)
+3. 点击后，将会打开命令行窗口![shell](https://ftp.bmp.ovh/imgs/2021/01/cc9167ae7a7de00c.png)
 
 ## 在命令行中输入以下命令
 
